@@ -9,7 +9,7 @@ import { formatDistanceToNow } from 'date-fns';
 const WorkoutDetails = ({workout}) => {
     const {dispatch} = useWorkoutsContext();
         const handleClick = async () =>{
-            const response = await fetch('https://workoutbuddy-hgc6.onrender.com/api/workouts' + workout._id, {
+            const response = await fetch('https://workoutbuddy-hgc6.onrender.com/api/workouts/' + workout._id, {
                 method: 'DELETE'
             })
                 const json = await response.json()
@@ -24,7 +24,7 @@ const WorkoutDetails = ({workout}) => {
             <p><strong> Load (in Kgs): </strong>{workout.load}</p>
             <p><strong> Reps: </strong>{workout.reps}</p>
              <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
-              <span class="material-symbols-outlined" onClick={handleClick}>delete</span>
+              <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
              
         </div>
     )
