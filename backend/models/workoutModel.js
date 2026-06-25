@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { applyTimestamps } = require('../../../fullstack project/backend/models/workoutModel');
+const { applyTimestamps } = require('../../../MERN AUTH/backend/models/userModel');
 
 const Schema = mongoose.Schema;
 
