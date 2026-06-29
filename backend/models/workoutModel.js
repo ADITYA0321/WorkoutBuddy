@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { applyTimestamps } = require('../models/userModel');
+
 
 
 const Schema = mongoose.Schema;
@@ -19,7 +19,7 @@ const workoutSchema = new Schema({
     },
     user_id:{
         type:String,
-        requirde:true
+        required:true
     }
  }, {
             timestamps: true
